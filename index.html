@@ -1,79 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rod Ideas - NFC Profile</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rod Ideas Digital Card</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-
-    <!-- Promotion Banner -->
     <div class="promotion-banner">
-      <p>✨ Want an NFC card like this? <a href="tel:+251916131313">Order yours now</a>!</p>
+      ✨ Want an NFC card like this? <a href="https://rodcards.com.et/order">Order yours now!</a>
     </div>
 
-    <!-- Cover Photo Section -->
     <div class="cover-photo">
-      <!-- Profile image on the left -->
-      <img class="profile-img" src="images/profile.jpg" alt="Profile Picture" />
-      <!-- Call Now button on the right -->
-      <a class="call-now" href="tel:+251916131313">Call Now</a>
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" onclick="document.getElementById('modal').style.display='block'">
+      <a href="tel:+251912345678" class="call-now">Call Now</a>
     </div>
 
-    <h2>Rod Ideas</h2>
-    <p class="role">Designer, Motion Graphics</p>
-    <p class="location">Addis Ababa</p>
-    <p class="bio">A Creative Graphic Designer uses visual communication</p>
+    <h1>Rod Ideas</h1>
+    <div class="role">Designer, Motion Graphics</div>
+    <div class="location">Addis Ababa</div>
+    <div class="bio">A Creative Graphic Designer uses visual communication</div>
 
-    <!-- Save Contact -->
-    <a class="save-contact-btn" href="contact.vcf" download>Save Contact</a>
+    <a href="#" class="save-contact-btn">Save Contact</a>
 
-    <!-- Social/Contact Links -->
-    <div class="link-row">
-      <a href="tel:+251916131313">
-        <img src="https://img.icons8.com/ios-filled/50/26e07f/phone.png" alt="Phone" />
-        <span>+251916131313</span>
-      </a>
+    <!-- Contact and Social Media Links -->
+    <div class="link-row"><a href="tel:+251912345678"><img src="https://img.icons8.com/ios-filled/50/26e07f/phone.png"/><span>+251912345678</span></a></div>
+    <div class="link-row"><a href="mailto:rod@example.com"><img src="https://img.icons8.com/color/48/000000/new-post.png"/><span>Email</span></a></div>
+    <div class="link-row"><a href="https://rodgraphics.com" target="_blank"><img src="https://img.icons8.com/color/48/domain.png"/><span>Website</span></a></div>
+    <div class="link-row"><a href="https://instagram.com/yourprofile" target="_blank"><img src="https://img.icons8.com/fluency/48/instagram-new.png"/><span>Instagram</span></a></div>
+    <div class="link-row"><a href="https://t.me/yourusername" target="_blank"><img src="https://img.icons8.com/color/48/telegram-app--v1.png"/><span>Telegram</span></a></div>
+    <div class="link-row"><a href="https://tiktok.com/@yourprofile" target="_blank"><img src="https://img.icons8.com/fluency/48/tiktok.png"/><span>TikTok</span></a></div>
+    <div class="link-row"><a href="https://wa.me/251916131313" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/><span>WhatsApp</span></a></div>
+    <div class="link-row"><a href="https://facebook.com/yourprofile" target="_blank"><img src="https://img.icons8.com/color/48/facebook.png"/><span>Facebook</span></a></div>
+    <div class="link-row"><a href="https://youtube.com/@yourchannel" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png"/><span>YouTube</span></a></div>
+    <div class="link-row"><a href="https://x.com/yourusername" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png"/><span>X</span></a></div>
+
+
+    <div class="banking-section">
+      <button onclick="this.nextElementSibling.classList.toggle('show')">Banking Details</button>
+      <div class="bank-details">
+        <p>Name: Tesfamlak Hadgu</p>
+        <p>CBE Account Number: 1000700557859</p>
+        <p>Awash Account Number: --------</p>
+        <p>Abysinia Account Number: ----------</p>
+        <p>Dashen Account Number: --------</p>
+      </div>
     </div>
 
-    <div class="link-row">
-      <a href="mailto:rod@example.com">
-        <img src="https://img.icons8.com/color/48/000000/new-post.png" alt="Email" />
-        <span>Email</span>
-      </a>
-    </div>
-
-    <div class="link-row">
-      <a href="https://rodgraphics.com" target="_blank">
-        <img src="https://img.icons8.com/color/48/domain.png" alt="Website" />
-        <span>Website</span>
-      </a>
-    </div>
-
-    <div class="link-row"><a href="https://instagram.com/yourprofile" target="_blank"><img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" /><span>Instagram</span></a></div>
-    <div class="link-row"><a href="https://t.me/yourusername" target="_blank"><img src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="Telegram" /><span>Telegram</span></a></div>
-    <div class="link-row"><a href="https://tiktok.com/@yourprofile" target="_blank"><img src="https://img.icons8.com/fluency/48/tiktok.png" alt="TikTok" /><span>TikTok</span></a></div>
-    <div class="link-row"><a href="https://wa.me/251916131313" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" /><span>WhatsApp</span></a></div>
-    <div class="link-row"><a href="https://facebook.com/yourprofile" target="_blank"><img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook" /><span>Facebook</span></a></div>
-    <div class="link-row"><a href="https://youtube.com/@yourchannel" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" /><span>YouTube</span></a></div>
-    <div class="link-row"><a href="https://x.com/yourusername" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png" alt="X" /><span>X</span></a></div>
-
-    <!-- Portfolio Image -->
     <div class="portfolio-section">
       <h3>My Portfolio</h3>
-      <img src="images/portfolio.jpg" alt="Portfolio Image" class="portfolio-img"/>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="moveCarousel(1)">❮</button>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="images/portfolio1.jpg" alt="Portfolio 1">
+            <img src="images/portfolio2.jpg" alt="Portfolio 2">
+            <img src="images/portfolio3.jpg" alt="Portfolio 3">
+            <img src="images/portfolio4.jpg" alt="Portfolio 4">
+            <img src="images/portfolio5.jpg" alt="Portfolio 5">
+            <img src="images/portfolio1.jpg" alt="Portfolio 1 (clone)">
+            <img src="images/portfolio2.jpg" alt="Portfolio 2 (clone)">
+            <img src="images/portfolio3.jpg" alt="Portfolio 3 (clone)">
+            <img src="images/portfolio4.jpg" alt="Portfolio 4 (clone)">
+            <img src="images/portfolio5.jpg" alt="Portfolio 5 (clone)">
+          </div>
+        </div>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+      </div>
     </div>
 
-    <!-- Company Logo and Description -->
     <div class="branding">
-      <a href="tel:+251916131313">
-        <img class="logo" src="images/logo.png" alt="Company Logo" />
-      </a>
-      <p class="brand-desc">Designed by <strong>Rod Graphics</strong><br/><em>Marketing Solutions for Your Business</em></p>
+      <a href="https://rodcards.com.et"><img src="images/logo.png" alt="Rod Graphics Logo" class="logo"></a>
+      <div class="brand-desc">Designed by Rod Graphics<br>Marketing Solutions for Your Business</div>
     </div>
-
   </div>
+
+  <div id="modal" class="modal">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
+    <img src="images/profile.jpg" alt="Enlarged Profile Picture" class="modal-content">
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const track = document.querySelector('.carousel-track');
+    const items = track.querySelectorAll('img');
+    const totalItems = 5; // Original number of unique images
+    const totalClonedItems = items.length; // 10 (5 original + 5 clones)
+    const itemWidth = 100 / totalClonedItems; // 10% per image
+
+    function moveCarousel(direction) {
+      currentIndex += 1; // Always move forward by 1
+      if (currentIndex >= totalClonedItems) currentIndex = 0; // Loop back to first image
+      track.style.transform = `translateX(-${currentIndex * itemWidth}%)`; // Move one image width
+    }
+
+    // Ensure initial position
+    track.style.transform = `translateX(0%)`;
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Automatic sliding every 5 seconds
+    setInterval(() => moveCarousel(1), 5000);
+  </script>
 </body>
 </html>
