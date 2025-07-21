@@ -14,7 +14,6 @@ body {
   text-align: center;
 }
 
-/* Banner */
 .promotion-banner {
   background-color: #f0f8ff;
   color: #111;
@@ -31,7 +30,6 @@ body {
   font-weight: bold;
 }
 
-/* Cover and Profile */
 .cover-photo {
   width: 100%;
   height: 180px;
@@ -53,6 +51,7 @@ body {
   bottom: -40px;
   left: 20px;
   background: white;
+  cursor: pointer;
 }
 
 .call-now {
@@ -69,7 +68,6 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Text Content */
 .role {
   font-weight: bold;
 }
@@ -85,7 +83,6 @@ body {
   color: #333;
 }
 
-/* Save Contact Button */
 .save-contact-btn {
   display: inline-block;
   background: black;
@@ -98,7 +95,6 @@ body {
   font-size: 16px;
 }
 
-/* Social Links */
 .link-row {
   display: flex;
   align-items: center;
@@ -126,25 +122,99 @@ body {
   text-align: left;
 }
 
-/* Portfolio Section */
+/* Banking Details */
+.banking-section {
+  margin: 25px 0 15px;
+  text-align: center;
+}
+
+.banking-section button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bank-details {
+  display: none;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.bank-details.show {
+  display: block;
+}
+
+/* Portfolio Carousel */
 .portfolio-section {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .portfolio-section h3 {
   margin-bottom: 10px;
 }
 
-.portfolio-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+.carousel-container {
+  position: relative;
 }
 
-/* Company Branding */
+.carousel {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  width: 1000%; /* 100% per image, 10 images (5 original + 5 clones) */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 10%; /* 100% / 10 images */
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+  background-color: #f9f9f9;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Branding */
 .branding {
   margin-top: 30px;
   text-align: center;
+}
+
+.branding a {
+  text-decoration: none;
 }
 
 .logo {
@@ -158,4 +228,36 @@ body {
   font-size: 14px;
   color: #444;
   line-height: 1.4;
+}
+
+/* Modal for enlarged profile picture */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: 5% auto;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }
