@@ -12,9 +12,9 @@
       ✨ Want an NFC card like this? <a href="tel:+251916131313">Order yours now!</a>
     </div>
 
-    <div class="cover-photo">
-      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" onclick="document.getElementById('modal').style.display='block'">
-      <a href="tel:+251912345678" class="call-now">Call Now</a>
+    <div class="cover-photo" onclick="document.getElementById('cover-modal').style.display='block'">
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" onclick="event.stopPropagation(); document.getElementById('modal').style.display='block'">
+      <a href="tel:+251916131313" class="call-now">Call Now</a>
     </div>
 
     <h1>Rod Ideas</h1>
@@ -27,7 +27,7 @@
     <!-- Contact and Social Media Links -->
     <div class="link-row"><a href="tel:+251916131313"><img src="https://img.icons8.com/ios-filled/50/26e07f/phone.png"/><span>+251916131313</span></a></div>
     <div class="link-row"><a href="mailto:tesfshlink@gmail.com"><img src="https://img.icons8.com/color/48/000000/new-post.png"/><span>Email</span></a></div>
-    <div class="link-row"><a href="https://rodgraphics.com" target="_blank"><img src="https://img.icons8.com/color/48/domain.png"/><span>Website</span></a></div>
+    <div class="link-row"><a href="https://rodgraphics.com.et" target="_blank"><img src="https://img.icons8.com/color/48/domain.png"/><span>Website</span></a></div>
     <div class="link-row"><a href="https://instagram.com/rodgraphicsss" target="_blank"><img src="https://img.icons8.com/fluency/48/instagram-new.png"/><span>Instagram</span></a></div>
     <div class="link-row"><a href="https://t.me/RodIdeas" target="_blank"><img src="https://img.icons8.com/color/48/telegram-app--v1.png"/><span>Telegram</span></a></div>
     <div class="link-row"><a href="https://tiktok.com/@ilovevfx" target="_blank"><img src="https://img.icons8.com/fluency/48/tiktok.png"/><span>TikTok</span></a></div>
@@ -36,22 +36,19 @@
     <div class="link-row"><a href="https://youtube.com/@rodgraphicsss" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png"/><span>YouTube</span></a></div>
     <div class="link-row"><a href="https://x.com/yourusername" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png"/><span>X</span></a></div>
 
-
     <div class="banking-section">
       <button onclick="this.nextElementSibling.classList.toggle('show')">Banking Details</button>
       <div class="bank-details">
         <p>Name: Tesfamlak Hadgu</p>
         <p>CBE Account Number: 1000700557859</p>
         <p>Awash Account Number: --------</p>
-        <p>Abysinia Account Number: ----------</p>
-        <p>Dashen Account Number: --------</p>
       </div>
     </div>
 
     <div class="portfolio-section">
       <h3>My Portfolio</h3>
       <div class="carousel-container">
-        <button class="carousel-btn prev" onclick="moveCarousel(1)">❮</button>
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
         <div class="carousel">
           <div class="carousel-track">
             <img src="images/portfolio1.jpg" alt="Portfolio 1">
@@ -77,8 +74,13 @@
   </div>
 
   <div id="modal" class="modal">
-    <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
+    <span class="close-btn" onclick="document.getElementById('modal').style.display='none'">×</span>
     <img src="images/profile.jpg" alt="Enlarged Profile Picture" class="modal-content">
+  </div>
+
+  <div id="cover-modal" class="modal">
+    <span class="close-btn" onclick="document.getElementById('cover-modal').style.display='none'">×</span>
+    <img src="images/cover.jpg" alt="Enlarged Cover Photo" class="modal-content">
   </div>
 
   <script>
