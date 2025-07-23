@@ -1,91 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rod Graphics</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="promotion-banner">
-      ✨ Want an NFC card like this? <a href="https://rodgraphics.com.et">Order yours now!</a>
-    </div>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
 
-    <div class="cover-photo" id="coverPhoto">
-      <img src="images/profile.jpg" alt="Profile Photo" class="profile-img" id="profilePhoto">
-      <a href="tel:+251916131313" class="call-now">Call Now</a>
-    </div>
+.container {
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
 
-    <div class="role">Rod Ideas</div>
-    <div class="location job-description">Designer, Motion Graphics</div>
-    <div class="location">Addis Ababa</div>
-    <div class="bio">A Creative Graphic Designer uses visual communication</div>
+.promotion-banner {
+  background-color: #f0f8ff;
+  color: #111;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
 
-    <a href="tel:+251916131313" class="save-contact-btn">Save Contact</a>
+.promotion-banner a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    <!-- Contact and Social Media Links -->
-    <div class="link-row"><a href="tel:+251916131313"><img src="https://img.icons8.com/ios-filled/50/26e07f/phone.png"/><span>+251916131313</span></a></div>
-    <div class="link-row"><a href="mailto:tesfshlink@gmail.com"><img src="https://img.icons8.com/color/48/000000/new-post.png"/><span>Email</span></a></div>
-    <div class="link-row"><a href="https://rodgraphics.com.et" target="_blank"><img src="https://img.icons8.com/color/48/domain.png"/><span>Website</span></a></div>
-    <div class="link-row"><a href="https://instagram.com/rodgraphicsss" target="_blank"><img src="https://img.icons8.com/fluency/48/instagram-new.png"/><span>Instagram</span></a></div>
-    <div class="link-row"><a href="https://t.me/RodIdeas" target="_blank"><img src="https://img.icons8.com/color/48/telegram-app--v1.png"/><span>Telegram</span></a></div>
-    <div class="link-row"><a href="https://tiktok.com/@ilovevfx" target="_blank"><img src="https://img.icons8.com/fluency/48/tiktok.png"/><span>TikTok</span></a></div>
-    <div class="link-row"><a href="https://wa.me/251916131313" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/><span>WhatsApp</span></a></div>
-    <div class="link-row"><a href="https://www.facebook.com/people/Rod-ideas/100063928758696/" target="_blank"><img src="https://img.icons8.com/color/48/facebook.png"/><span>Facebook</span></a></div>
-    <div class="link-row"><a href="https://youtube.com/@rodgraphicsss" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png"/><span>YouTube</span></a></div>
-    <div class="link-row"><a href="https://x.com/yourusername" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png"/><span>X</span></a></div>
-    <div class="link-row">
-      <button class="share-btn"><img src="https://img.icons8.com/ios-filled/50/000000/share.png" alt="Share">Share Contact</button>
-    </div>
+.cover-photo {
+  width: 100%;
+  height: 180px;
+  background-image: url('images/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
 
-    <div class="banking-section">
-      <button id="bankingBtn">Banking Details</button>
-      <div class="bank-details" id="bankDetails">
-        <p><strong>Name:</strong> Tesfamlak Hadgu</p>
-        <p><strong>CBE Account Number:</strong> 1000700557859</p>
-        <p><strong>Awash Account Number:</strong> --------</p>
-      </div>
-    </div>
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  position: absolute;
+  bottom: -40px;
+  left: 20px;
+  background: white;
+  cursor: pointer;
+}
 
-    <div class="portfolio-section">
-      <h3>My Portfolio</h3>
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="carousel-track" id="carouselTrack">
-            <img src="images/portfolio1.jpg" alt="Portfolio 1">
-            <img src="images/portfolio2.jpg" alt="Portfolio 2">
-            <img src="images/portfolio3.jpg" alt="Portfolio 3">
-            <img src="images/portfolio4.jpg" alt="Portfolio 4">
-            <img src="images/portfolio5.jpg" alt="Portfolio 5">
-            <img src="images/portfolio1.jpg" alt="Portfolio 1">
-            <img src="images/portfolio2.jpg" alt="Portfolio 2">
-            <img src="images/portfolio3.jpg" alt="Portfolio 3">
-            <img src="images/portfolio4.jpg" alt="Portfolio 4">
-            <img src="images/portfolio5.jpg" alt="Portfolio 5">
-          </div>
-        </div>
-      </div>
-    </div>
+.call-now {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  background: linear-gradient(to right, #0099ff, #66ccff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-    <div class="branding">
-      <a href="https://rodgraphics.com.et">
-        <img src="images/logo.png" alt="Rod Graphics Logo" class="logo">
-        <div class="brand-desc">Designed by Rod Graphics<br>Marketing Solutions for Your Business</div>
-      </a>
-    </div>
-  </div>
+.role {
+  font-weight: bold;
+}
 
-  <div class="modal" id="coverModal">
-    <span class="close-btn" id="closeCover">×</span>
-    <img class="modal-content" id="coverModalImg">
-  </div>
+.location {
+  font-style: italic;
+  color: #555;
+  margin: 5px 0;
+}
 
-  <div class="modal" id="profileModal">
-    <span class="close-btn" id="closeProfile">×</span>
-    <img class="modal-content" id="profileModalImg">
-  </div>
+.location.job-description {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  padding: 5px 0;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.bio {
+  margin: 15px 0;
+  color: #333;
+}
+
+.save-contact-btn {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 15px 30px;
+  margin: 20px 0;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.link-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  justify-content: start;
+}
+
+.link-row a, .link-row button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.link-row img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+.link-row span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Banking Details */
+.banking-section {
+  margin: 25px 0 15px;
+  text-align: center;
+}
+
+.banking-section button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bank-details {
+  display: none;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.bank-details.show {
+  display: block;
+}
+
+/* Portfolio Carousel */
+.portfolio-section {
+  margin-top: 20px;
+}
+
+.portfolio-section h3 {
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  width: 1000%; /* 100% per image, 10 images (5 original + 5 clones) */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 10%; /* 100% / 10 images */
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+  background-color: #f9f9f9;
+}
+
+/* Branding */
+.branding {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.branding a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.brand-desc {
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Modal for enlarged profile picture and cover photo */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
