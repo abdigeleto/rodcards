@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rod Ideas Digital Card</title>
+  <title>Rod Graphics</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="promotion-banner">
-      ✨ Want an NFC card like this? <a href="tel:+251916131313">Order yours now!</a>
+      ✨ Want an NFC card like this? <a href="https://rodgraphics.com.et">Order yours now!</a>
     </div>
 
-    <div class="cover-photo" onclick="document.getElementById('cover-modal').style.display='block'">
-      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" onclick="event.stopPropagation(); document.getElementById('modal').style.display='block'">
+    <div class="cover-photo" id="coverPhoto">
+      <img src="images/profile.jpg" alt="Profile Photo" class="profile-img" id="profilePhoto">
       <a href="tel:+251916131313" class="call-now">Call Now</a>
     </div>
 
-    <h1>Rod Ideas</h1>
-    <div class="role">Designer, Motion Graphics</div>
+    <div class="role">Rod Ideas</div>
+    <div class="location job-description">Designer, Motion Graphics</div>
     <div class="location">Addis Ababa</div>
     <div class="bio">A Creative Graphic Designer uses visual communication</div>
 
-    <a href="#" class="save-contact-btn">Save Contact</a>
+    <a href="tel:+251916131313" class="save-contact-btn">Save Contact</a>
 
     <!-- Contact and Social Media Links -->
     <div class="link-row"><a href="tel:+251916131313"><img src="https://img.icons8.com/ios-filled/50/26e07f/phone.png"/><span>+251916131313</span></a></div>
@@ -32,84 +32,60 @@
     <div class="link-row"><a href="https://t.me/RodIdeas" target="_blank"><img src="https://img.icons8.com/color/48/telegram-app--v1.png"/><span>Telegram</span></a></div>
     <div class="link-row"><a href="https://tiktok.com/@ilovevfx" target="_blank"><img src="https://img.icons8.com/fluency/48/tiktok.png"/><span>TikTok</span></a></div>
     <div class="link-row"><a href="https://wa.me/251916131313" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/><span>WhatsApp</span></a></div>
-    <div class="link-row"><a href="https://https://www.facebook.com/people/Rod-ideas/100063928758696/" target="_blank"><img src="https://img.icons8.com/color/48/facebook.png"/><span>Facebook</span></a></div>
+    <div class="link-row"><a href="https://www.facebook.com/people/Rod-ideas/100063928758696/" target="_blank"><img src="https://img.icons8.com/color/48/facebook.png"/><span>Facebook</span></a></div>
     <div class="link-row"><a href="https://youtube.com/@rodgraphicsss" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png"/><span>YouTube</span></a></div>
     <div class="link-row"><a href="https://x.com/yourusername" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png"/><span>X</span></a></div>
+    <div class="link-row">
+      <button class="share-btn"><img src="https://img.icons8.com/ios-filled/50/000000/share.png" alt="Share">Share Contact</button>
+    </div>
 
     <div class="banking-section">
-      <button onclick="this.nextElementSibling.classList.toggle('show')">Banking Details</button>
-      <div class="bank-details">
-        <p>Name: Tesfamlak Hadgu</p>
-        <p>CBE Account Number: 1000700557859</p>
-        <p>Awash Account Number: --------</p>
+      <button id="bankingBtn">Banking Details</button>
+      <div class="bank-details" id="bankDetails">
+        <p><strong>Name:</strong> Tesfamlak Hadgu</p>
+        <p><strong>CBE Account Number:</strong> 1000700557859</p>
+        <p><strong>Awash Account Number:</strong> --------</p>
       </div>
     </div>
 
     <div class="portfolio-section">
       <h3>My Portfolio</h3>
       <div class="carousel-container">
-        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
         <div class="carousel">
-          <div class="carousel-track">
+          <div class="carousel-track" id="carouselTrack">
             <img src="images/portfolio1.jpg" alt="Portfolio 1">
             <img src="images/portfolio2.jpg" alt="Portfolio 2">
             <img src="images/portfolio3.jpg" alt="Portfolio 3">
             <img src="images/portfolio4.jpg" alt="Portfolio 4">
             <img src="images/portfolio5.jpg" alt="Portfolio 5">
-            <img src="images/portfolio1.jpg" alt="Portfolio 1 (clone)">
-            <img src="images/portfolio2.jpg" alt="Portfolio 2 (clone)">
-            <img src="images/portfolio3.jpg" alt="Portfolio 3 (clone)">
-            <img src="images/portfolio4.jpg" alt="Portfolio 4 (clone)">
-            <img src="images/portfolio5.jpg" alt="Portfolio 5 (clone)">
+            <img src="images/portfolio1.jpg" alt="Portfolio 1">
+            <img src="images/portfolio2.jpg" alt="Portfolio 2">
+            <img src="images/portfolio3.jpg" alt="Portfolio 3">
+            <img src="images/portfolio4.jpg" alt="Portfolio 4">
+            <img src="images/portfolio5.jpg" alt="Portfolio 5">
           </div>
         </div>
-        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
       </div>
     </div>
 
     <div class="branding">
-      <a href="https://rodcards.com.et"><img src="images/logo.png" alt="Rod Graphics Logo" class="logo"></a>
-      <div class="brand-desc">Designed by Rod Graphics<br>Marketing Solutions for Your Business</div>
+      <a href="https://rodgraphics.com.et">
+        <img src="images/logo.png" alt="Rod Graphics Logo" class="logo">
+        <div class="brand-desc">Designed by Rod Graphics<br>Marketing Solutions for Your Business</div>
+      </a>
     </div>
   </div>
 
-  <div id="modal" class="modal">
-    <span class="close-btn" onclick="document.getElementById('modal').style.display='none'">×</span>
-    <img src="images/profile.jpg" alt="Enlarged Profile Picture" class="modal-content">
+  <div class="modal" id="coverModal">
+    <span class="close-btn" id="closeCover">×</span>
+    <img class="modal-content" id="coverModalImg">
   </div>
 
-  <div id="cover-modal" class="modal">
-    <span class="close-btn" onclick="document.getElementById('cover-modal').style.display='none'">×</span>
-    <img src="images/cover.jpg" alt="Enlarged Cover Photo" class="modal-content">
+  <div class="modal" id="profileModal">
+    <span class="close-btn" id="closeProfile">×</span>
+    <img class="modal-content" id="profileModalImg">
   </div>
 
-  <script>
-    let currentIndex = 0;
-    const track = document.querySelector('.carousel-track');
-    const items = track.querySelectorAll('img');
-    const totalItems = 5; // Original number of unique images
-    const totalClonedItems = items.length; // 10 (5 original + 5 clones)
-    const itemWidth = 100 / totalClonedItems; // 10% per image
-
-    function moveCarousel(direction) {
-      currentIndex += 1; // Always move forward by 1
-      if (currentIndex >= totalClonedItems) currentIndex = 0; // Loop back to first image
-      track.style.transform = `translateX(-${currentIndex * itemWidth}%)`; // Move one image width
-    }
-
-    // Ensure initial position
-    track.style.transform = `translateX(0%)`;
-
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      const modal = document.getElementById('modal');
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
-    }
-
-    // Automatic sliding every 5 seconds
-    setInterval(() => moveCarousel(1), 5000);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
