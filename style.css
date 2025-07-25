@@ -1,24 +1,34 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: start;
   min-height: 100vh;
 }
 
 .container {
-  max-width: 400px;
-  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
   text-align: center;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .cover-photo {
+    border-radius: 10px;
+  }
 }
 
 .promotion-banner {
   background-color: #f0f8ff;
   color: #111;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 12px 20px;
   margin-bottom: 20px;
   font-size: 15px;
   font-weight: 500;
@@ -32,14 +42,14 @@ body {
 
 .cover-photo {
   width: 100%;
-  height: 180px;
+  height: 200px;
   background-image: url('images/cover.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
   position: relative;
   margin-bottom: 60px;
   cursor: pointer;
+  border-radius: 0;
 }
 
 .profile-img {
@@ -71,24 +81,27 @@ body {
 
 .role {
   font-weight: bold;
+  padding: 0 20px;
 }
 
 .location {
   font-style: italic;
   color: #555;
   margin: 5px 0;
+  padding: 0 20px;
 }
 
 .location.job-description {
   font-weight: bold;
   font-size: 16px;
   color: #333;
-  padding: 5px 0;
+  padding: 5px 20px;
 }
 
 .bio {
   margin: 15px 0;
   color: #333;
+  padding: 0 20px;
 }
 
 .save-contact-btn {
@@ -106,7 +119,7 @@ body {
 .link-row {
   display: flex;
   align-items: center;
-  padding: 12px 0;
+  padding: 12px 20px;
   border-bottom: 1px solid #eee;
   justify-content: start;
 }
@@ -133,10 +146,10 @@ body {
   text-align: left;
 }
 
-/* Banking Details */
 .banking-section {
   margin: 25px 0 15px;
   text-align: center;
+  padding: 0 20px;
 }
 
 .banking-section button {
@@ -163,9 +176,9 @@ body {
   display: block;
 }
 
-/* Portfolio Carousel */
 .portfolio-section {
   margin-top: 20px;
+  padding: 0 20px;
 }
 
 .portfolio-section h3 {
@@ -174,33 +187,52 @@ body {
 
 .carousel-container {
   position: relative;
+  width: 100%;
 }
 
 .carousel {
   width: 100%;
-  height: 300px;
+  height: 0;
+  padding-bottom: 100%; /* 16:9 Aspect Ratio */
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
 }
 
 .carousel-track {
   display: flex;
-  width: 1000%; /* 100% per image, 10 images (5 original + 5 clones) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000%;
+  height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-track img {
-  width: 10%; /* 100% / 10 images */
+  width: 10%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /* Changed from contain to cover */
   flex-shrink: 0;
   background-color: #f9f9f9;
 }
 
-/* Branding */
+/* Desktop-specific adjustments */
+@media (min-width: 768px) {
+  .carousel {
+    padding-bottom: 100%; /* Adjust aspect ratio for desktop */
+  }
+  
+  .carousel-track img {
+    object-fit: contain; /* Show full image on desktop */
+    background-color: #000; /* Black background for letterboxing */
+  }
+}
+
 .branding {
   margin-top: 30px;
   text-align: center;
+  padding: 0 20px 20px;
 }
 
 .branding a {
@@ -220,7 +252,6 @@ body {
   line-height: 1.4;
 }
 
-/* Modal for enlarged profile picture and cover photo */
 .modal {
   display: none;
   position: fixed;
