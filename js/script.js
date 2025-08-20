@@ -18,26 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCover = document.getElementById('closeCover');
   const closeProfile = document.getElementById('closeProfile');
 
-if (coverPhoto && coverModal && coverModalImg && closeCover) {
-  coverPhoto.addEventListener('click', () => {
-    // Get the first img element inside cover-photo div
-    const coverImg = coverPhoto.querySelector('img:first-child');
-    const coverImgSrc = coverImg.src;
-    coverModalImg.src = coverImgSrc;
-    coverModal.style.display = 'block';
-  });
+  if (coverPhoto && coverModal && coverModalImg && closeCover) {
+    coverPhoto.addEventListener('click', () => {
+      // Get the first img element inside cover-photo div
+      const coverImg = coverPhoto.querySelector('img:first-child');
+      const coverImgSrc = coverImg.src;
+      coverModalImg.src = coverImgSrc;
+      coverModal.style.display = 'block';
+    });
 
-  // The rest of your existing modal code can stay exactly the same
-  closeCover.addEventListener('click', () => {
-    coverModal.style.display = 'none';
-  });
-
-  coverModal.addEventListener('click', (e) => {
-    if (e.target === coverModal) {
+    // The rest of your existing modal code can stay exactly the same
+    closeCover.addEventListener('click', () => {
       coverModal.style.display = 'none';
-    }
-  });
-}
+    });
+
+    coverModal.addEventListener('click', (e) => {
+      if (e.target === coverModal) {
+        coverModal.style.display = 'none';
+      }
+    });
+  }
 
   if (profilePhoto && profileModal && profileModalImg && closeProfile) {
     profilePhoto.addEventListener('click', (e) => {
@@ -58,32 +58,31 @@ if (coverPhoto && coverModal && coverModalImg && closeCover) {
     });
   }
 
-// Share Button Script (Fixed - No duplicates)
-document.querySelectorAll('.share-btn').forEach(button => {
-  button.addEventListener('click', async () => {
-    const name = button.dataset.name;
-    const phone = button.dataset.phone;
-    const website = button.dataset.website;
+  // Share Button Script (Fixed - No duplicates)
+  document.querySelectorAll('.share-btn').forEach(button => {
+    button.addEventListener('click', async () => {
+      const name = button.dataset.name;
+      const phone = button.dataset.phone;
+      const website = button.dataset.website;
 
-    const shareData = {
-      title: `${name}'s Contact`,  // Cleaner title (optional)
-      text: `Name: ${name}\nPhone: ${phone}`,  // Website removed here (no duplicate)
-      url: website  // URL appears ONCE as clickable link
-    };
+      const shareData = {
+        title: `${name}'s Contact`,  // Cleaner title (optional)
+        text: `Name: ${name}\nPhone: ${phone}`,  // Website removed here (no duplicate)
+        url: website  // URL appears ONCE as clickable link
+      };
 
-    try {
-      if (navigator.share) {
-        await navigator.share(shareData);
-      } else {
-        // Fallback alert (includes website since no URL field)
-        alert(`Name: ${name}\nPhone: ${phone}\nWebsite: ${website}`);
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          // Fallback alert (includes website since no URL field)
+          alert(`Name: ${name}\nPhone: ${phone}\nWebsite: ${website}`);
+        }
+      } catch (err) {
+        console.error('Sharing failed:', err);
       }
-    } catch (err) {
-      console.error('Sharing failed:', err);
-    }
+    });
   });
-});
-
 
   // Carousel
   const carouselTrack = document.getElementById('carouselTrack');
@@ -129,15 +128,19 @@ document.querySelectorAll('.share-btn').forEach(button => {
     }
   }
 
-  // Make carousel clickable
+  // Make carousel clickable - FIXED VERSION
   const clickableCarousel = document.getElementById('clickableCarousel');
   if (clickableCarousel) {
     clickableCarousel.style.cursor = 'pointer';
-    clickableCarousel.addEventListener('click', () => {
-      window.open('https:https://rodcards.com.et/', '_blank');
-    });
+    
+    // Get the link from the data-link attribute
+    const link = clickableCarousel.getAttribute('data-link');
+    
+    // Only add the click event if a link is provided
+    if (link) {
+      clickableCarousel.addEventListener('click', () => {
+        window.open(link, '_blank');
+      });
+    }
   }
 });
-
-
-
