@@ -134,9 +134,10 @@ document.querySelectorAll('.share-btn').forEach(button => {
   if (clickableCarousel) {
     clickableCarousel.style.cursor = 'pointer';
     clickableCarousel.addEventListener('click', () => {
-      window.open('https://yehulusaccos.et/en/home', '_blank');
+      window.open('https:https://rodcards.com.et/', '_blank');
     });
   }
 });
+
 
 
